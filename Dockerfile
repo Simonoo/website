@@ -6,3 +6,6 @@ COPY ["images","/usr/local/apache2/htdocs/images"]
 COPY ["layout","/usr/local/apache2/htdocs/layout"]
 COPY ["pages","/usr/local/apache2/htdocs/pages"]
 CMD ["httpd-foreground"]
+
+#docker build --pull --rm -f "Dockerfile" -t apache:latest "." 
+#docker run --rm -d  -p 8080:8080/tcp apache:latest
